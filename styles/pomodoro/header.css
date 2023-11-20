@@ -1,88 +1,50 @@
 @import url("../pagina-inicial/styles.css");
 
 :root {
-    --bg-color: #164863;
-    --card-color: #427D9D;
-    --titulo-color: #9BBEC8;
-    --bg-claro: #DDF2FD;
+    --background: url("../../pomodoro/imagens/lofi-girl-doing-homework-moewalls-com.mp4");
+    --btn-color: #84A7C5;
+    --titulo-color: #343434;
+    --cor-clara: #C7CBCC;
     --fonte-titulo: 'M PLUS Rounded 1c', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-html {
-    background: var(--bg-color);
-    min-height: 100vh;
-    font-size: 10px;
-}
-
 body {
-    min-height: 100vh;
-    background: url("../../pomodoro/imagens/pattern.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--fonte-titulo), cursive;
+#video-bg {
+    width: 110%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo da página */
 }
 
-.app__logo-figure {
-    display: flex;
-    justify-content: center;
-    padding: 4rem 0;
-}
-
-.app__logo-titulo {
-    color: var(--branco);
-    font-weight: 700;
-    font-size: 2em;
-}
-
-.app__logo-titulo:hover {
-    cursor: pointer;
-}
-
-.app__section-container {
+.cabecalho {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.app_container-card {
-    display: flex;
-    background-color: var(--card-color);
-    width: 40%;
-    height: 50vh;
-    margin-top: 1em;
-    border-radius: 27px;
+    box-shadow: none;
+    padding: 0.6em;
+    background-color: var(--branco);
     opacity: 0.8;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
-.app__card-lista {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1em;
+.cabecalho-titulo {
+    font-size: 2em;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
 }
 
-.app__card-button {
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-    color: var(--branco);
-    cursor: pointer;
+span {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--btn-color);
 }
 
+.pomodoro__container-card {
 
-.app__card-button.active {
-    border-radius: 0.8rem;
-    padding: 10px;
-    background: var(--bg-color);
-    font-weight: 600;
 }
