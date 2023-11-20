@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-contexto="foco">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/pagina-inicial/reset.css">
+    <link rel="stylesheet" href="../styles/pomodoro/header.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <figure class="app__logo-figure">
+                <h2 class="app__logo-titulo">Fokus Studystacker</h2>
+            </figure>
+        </header>
+        <section class="app__section-container">
+            <div class="app_container-card">
+
+                <ul class="app__card-lista">
+                    <li class="app__card-lista-item">
+                        <button data-contexto="foco" class="app__card-button active">Foco</button>
+                    </li>
+                    <li class="app__card-lista-item">
+                        <button data-contexto="short" class="app__card-button">Descanso curto</button>
+                    </li>
+                    <li class="app__card-lista-item">
+                        <button data-contexto="long" class="app__card-button">Descanso longo</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="pomodoro.js" defer></script>
+</body>
+</html>
