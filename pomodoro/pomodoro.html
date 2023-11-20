@@ -14,11 +14,32 @@
 </head>
 <body>
     <header class="cabecalho">
-        <h2 class="cabecalho-titulo">Fokus Study<span>Stacker</span></h2>
+        <h2 class="cabecalho-titulo"><a href="../index.html">Fokus Study<span>Stacker</span></a></h2>
     </header>
 
     <video autoplay muted loop id="video-bg">
         <source src="imagens/lofi-girl-doing-homework-moewalls-com_iFkCLQle.mp4" type="video/mp4">
     </video>
+
+    <main>
+        <section class="pomodoro__container">
+            <div class="pomodoro__container-card left">
+                <div class="pomodoro-card-botoes">
+                    <button class="pomodoro-card-button active" data-contexto="foco" id="foco">Pomodoro</button>
+                    <button class="pomodoro-card-button" data-contexto="short" id="curto">Intervalo curto</button>
+                    <button class="pomodoro-card-button" data-contexto="long" id="longo">Intervalo longo</button>
+                </div>
+
+                <div class="temporizador" id="time">25:00</div>
+                <button class="pomodoro-card-button-comecar active" id="btn-time">Começar</button>
+            </div>
+            <div class="pomodoro__container-card right">
+                <h2 class="pomodoro-left-card-titulo">Tarefas</h2>
+
+            </div>
+        </section>
+    </main>
+    
+    <script src="pomodoro.js"></script>
 </body>
 </html>
