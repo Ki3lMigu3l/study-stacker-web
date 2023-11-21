@@ -9,12 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../styles/pagina-inicial/reset.css">
-    <link rel="stylesheet" href="../styles/pomodoro/header.css">
+    <link rel="stylesheet" href="../styles/pomodoro/pomodoro.css">
     <title>Pomodoro</title>
 </head>
 <body>
     <header class="cabecalho">
-        <h2 class="cabecalho-titulo"><a href="../index.html">Fokus Study<span>Stacker</span></a></h2>
+        <nav class="cabecalho__container-nav">
+            
+            <div class="cabecalho__container-logo">
+                <a href="../index.html" class="cabecalho__logo">Fokus Study</a><button class="cabecalho__logo-final">Stacker</button>
+            </div>
+
+            <div class="cabecalho__container-opcoes">
+                <a href="../pomodoro/pomodoro.html" class="cabecalho_opcoes-link active-nav">Pomodoro</a>
+                <a href="../jogos/numeroSecreto.html" class="cabecalho_opcoes-link">Jogos</a>
+                <a href="https://github.com/Ki3lMigu3l" class="cabecalho_opcoes-link">Repositorio</a>       
+            </div>
+        </nav>
     </header>
 
     <video autoplay muted loop id="video-bg">
