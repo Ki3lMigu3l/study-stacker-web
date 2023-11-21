@@ -11,4 +11,13 @@ body {
     font-family: var(--fonte-principal);
     color: var(--preto);
     font-size: 16px;
+    transition: 2s;
+}
+
+.swiper-button-prev {
+    color: var(--preto);
+}
+
+.swiper-button-next {
+    color: var(--preto);
 }
