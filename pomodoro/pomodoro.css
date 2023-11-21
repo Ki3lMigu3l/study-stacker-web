@@ -1,4 +1,4 @@
-@import url("../pagina-inicial/styles.css");
+@import url("../styles/pagina-inicial/styles.css");
 
 :root {
     --background: url("../../pomodoro/imagens/lofi-girl-doing-homework-moewalls-com.mp4");
@@ -87,8 +87,14 @@ a {
     margin-left: 1em;
 }
 
-.cabecalho_opcoes-link:hover, .cabecalho__logo-final:hover{
+.cabecalho_opcoes-link:hover {
     color: var(--preto);
+    font-weight: 700;
+    font-family: var(--fonte-principal);
+}
+
+.cabecalho__logo-final:hover {
+    color: var(--btn-color);
 }
 
 span {
