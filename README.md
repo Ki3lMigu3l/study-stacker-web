@@ -21,6 +21,10 @@ A formação "Desenvolva Aplicações Web com JavaScript" oferece uma abordagem 
 
 - **CSS:** Utilizado para estilizar e projetar a interface, garantindo uma experiência visualmente agradável e consistente.
 
+
+## Página principal
+![Print da imagem principal do projeto](https://github.com/Ki3lMigu3l/StudyStacker/blob/main/assets/StudyStacker-principal-page.png)
+
 ## Como Contribuir
 
 Você também pode fazer parte desta comunidade de aprendizado! Se você participou da formação e deseja mostrar seu trabalho nesta plataforma, siga as instruções de contribuição disponíveis no nosso repositório no GitHub.
