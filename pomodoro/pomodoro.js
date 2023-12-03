@@ -6,6 +6,12 @@ const descansoLongoBtn = document.getElementById('longo');
 const temporizador = document.querySelector('.temporizador');
 const startPauseBtn = document.querySelector('#btn-time');
 
+const tarefaInput = document.querySelector('#tarefa-input');
+const tarefaList = document.querySelector('#tarefa-list');
+const btnTarefa = document.querySelector('#btn-pomodoro');
+
+let tarefas = [];
+
 let tempoDecorridoEmSegundos = 1500;
 let intervaloId = null;
 
@@ -72,4 +78,28 @@ function zerar() {
     clearInterval(intervaloId);
     startPauseBtn.textContent = "Começar"
     intervaloId = null;
+}
+
+btnTarefa.addEventListener('click', () => {
+    adicionarTarefa();
+    console.log(tarefaInput.value);
+});
+
+function adicionarTarefa() {
+    
+    if (tarefaInput.value.trim() !== '') {
+        const novaTarefa = {
+            id: tarefas.length + 1,
+            name: tarefaInput.value.trim(),
+        };
+
+        tarefas.push(novaTarefa);
+        tarefaInput.value = '';
+    }
+
+ 
+
+    function deletarTarefa (tarefaId) {
+        tarefas = tarefas.filter(tarefa => tarefa.id !== tarefaId);
+    }
 }
