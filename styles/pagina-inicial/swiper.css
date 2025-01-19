@@ -25,11 +25,50 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff; /* Cor das setas */
+  color: #fff; 
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@media (max-width: 1024px){
+    .swiper {
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        padding: 8px;
+        top: 60%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        padding: 8px;
+        top: 60%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper {
+        width: 90%;
+        margin-top: 30px; 
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        padding: 6px; 
+        top: 60%; 
+    }
 }

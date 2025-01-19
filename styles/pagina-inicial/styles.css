@@ -176,3 +176,135 @@ strong {
 .green {
     background-color: #00ca4e;
 }
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .sobre__container-conteudo {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .sobre__container-img {
+        width: 85%;
+    }
+
+    .sobre__container-informacoes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre__container-conteudo-projeto {
+        width: 90%;
+        padding: 2em;
+    }
+
+    .sobre-titulo {
+        font-size: 1.5rem;
+    }
+
+    .sobre-titulo-projeto {
+        font-size: 1.5rem;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .tools {
+        flex-direction: row;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .sobre__container-conteudo {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .sobre__container-img {
+        width: 85%;
+    }
+
+    .sobre__container-informacoes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre__container-conteudo-projeto {
+        width: 90%;
+        padding: 2em;
+    }
+
+    .sobre-titulo {
+        font-size: 1.5rem;
+    }
+
+    .sobre-titulo-projeto {
+        font-size: 1.5rem;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .tools {
+        flex-direction: row;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .sobre__container-img {
+        width: 88%;
+    }
+
+    .tools {
+        flex-direction: row;
+    }
+
+    .sobre__container-conteudo {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .sobre__container-informacoes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sobre__container-conteudo-projeto {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .sobre-titulo {
+        font-size: 1.2rem;
+    }
+
+    .sobre-titulo-projeto {
+        font-size: 1.2rem;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .github-titulo {
+        font-size: 0.9em;
+    }
+}
