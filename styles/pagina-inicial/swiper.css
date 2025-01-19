@@ -1,7 +1,8 @@
 .swiper {
-    margin-top: 3em;
-    width: 70%;
-    height: 78vh;
+    margin-top: 100px;
+    width: 55%;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .swiper-wrapper {
@@ -17,4 +18,18 @@
 
 img {
     width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff; /* Cor das setas */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }

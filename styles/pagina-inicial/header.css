@@ -1,15 +1,16 @@
 .cabecalho {
     display: flex;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .cabecalho__container-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 1em;
+    padding: 2rem;
 }
 
 .cabecalho__container-logo {
