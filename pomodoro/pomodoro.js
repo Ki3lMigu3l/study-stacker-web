@@ -1,105 +1,86 @@
-const botoes = document.querySelectorAll('.pomodoro-card-button');
+const botoesModo = document.querySelectorAll('.cabecalho__botao');
+const tempoDisplay = document.getElementById('tempo');
+const btnIniciarPausar = document.getElementById('btn-iniciar-pausar');
+const formTarefa = document.getElementById('form-tarefa');
+const inputTarefa = document.getElementById('input-tarefa');
+const listaTarefas = document.getElementById('lista-tarefas');
 
-const focoBtn = document.getElementById('foco');
-const descansoCurtoBtn = document.getElementById('curto');
-const descansoLongoBtn = document.getElementById('longo');
-const temporizador = document.querySelector('.temporizador');
-const startPauseBtn = document.querySelector('#btn-time');
-
-const tarefaInput = document.querySelector('#tarefa-input');
-const tarefaList = document.querySelector('#tarefa-list');
-const btnTarefa = document.querySelector('#btn-pomodoro');
-
-let tarefas = [];
-
-let tempoDecorridoEmSegundos = 1500;
+let tempoAtual = 1500;
 let intervaloId = null;
+let modoAtual = 'foco';
+let tempoPausado = null;
 
-focoBtn.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 1500;
-    alterarContexto();
-    focoBtn.classList.add('active');
-})
+const tempos = {
+    foco: 1500, 
+    curto: 300, 
+    longo: 900,
+};
 
-descansoCurtoBtn.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 300;
-    alterarContexto();
-    descansoCurtoBtn.classList.add('active');
-})
-
-descansoLongoBtn.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 900;
-    alterarContexto();
-    descansoLongoBtn.classList.add('active');
-})
-
-function alterarContexto() {
-    mostrarTempo();
-    botoes.forEach(function (contexto) {
-        contexto.classList.remove('active')
-    })
+function atualizarTempo() {
+    const minutos = Math.floor(tempoAtual / 60);
+    const segundos = tempoAtual % 60;
+    tempoDisplay.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
 }
 
-
-function mostrarTempo () {
-    const tempo = new Date(tempoDecorridoEmSegundos * 1000);
-    const tempoFormatado = tempo.toLocaleString('pt-br', {minute: '2-digit', second: '2-digit'});
-    console.log(tempoFormatado)
-    temporizador.innerHTML = `${tempoFormatado}`;
-
-}
-
-const contagemRegressiva = () => {
-    
-    if (tempoDecorridoEmSegundos <= 0) {
-        zerar();
-        alert('Tempo finalizado!');
-        return
-    }
-    
-    tempoDecorridoEmSegundos -= 1
-    return mostrarTempo();
-}
-
-startPauseBtn.addEventListener('click', iniciarOuPausar);
-
-function iniciarOuPausar () {
-    
+function iniciarOuPausar() {
     if (intervaloId) {
-        zerar();
-        return
+        clearInterval(intervaloId);
+        intervaloId = null;
+        btnIniciarPausar.textContent = 'Começar';
+    } else {
+        intervaloId = setInterval(() => {
+            if (tempoAtual <= 0) {
+                clearInterval(intervaloId);
+                alert('Tempo finalizado!');
+                return;
+            }
+            tempoAtual--;
+            atualizarTempo();
+        }, 1000);
+        btnIniciarPausar.textContent = 'Pausar';
     }
-    
-    intervaloId = setInterval(contagemRegressiva, 1000);
-    startPauseBtn.textContent = "Pausar";
 }
 
-function zerar() {
-    clearInterval(intervaloId);
-    startPauseBtn.textContent = "Começar"
-    intervaloId = null;
+
+function alternarModo(modo) {
+    if (modo === modoAtual) return;
+
+    modoAtual = modo;
+    tempoPausado = tempoAtual;
+    tempoAtual = tempos[modo];
+    atualizarTempo();
+
+    botoesModo.forEach(botao => botao.classList.remove('active'));
+    document.querySelector(`[data-modo="${modo}"]`).classList.add('active');
+
+    if (intervaloId) {
+        clearInterval(intervaloId);
+        intervaloId = null;
+        btnIniciarPausar.textContent = 'Começar';
+    }
 }
 
-btnTarefa.addEventListener('click', () => {
-    adicionarTarefa();
-    console.log(tarefaInput.value);
+function adicionarTarefa(event) {
+    event.preventDefault();
+    if (inputTarefa.value.trim() === '') return;
+
+    const li = document.createElement('li');
+    li.textContent = inputTarefa.value.trim();
+
+    const botaoDeletar = document.createElement('button');
+    botaoDeletar.textContent = '❌';
+    botaoDeletar.addEventListener('click', () => li.remove());
+
+    li.appendChild(botaoDeletar);
+    listaTarefas.appendChild(li);
+    inputTarefa.value = '';
+}
+
+botoesModo.forEach(botao => {
+    botao.addEventListener('click', () => alternarModo(botao.dataset.modo));
 });
 
-function adicionarTarefa() {
-    
-    if (tarefaInput.value.trim() !== '') {
-        const novaTarefa = {
-            id: tarefas.length + 1,
-            name: tarefaInput.value.trim(),
-        };
+btnIniciarPausar.addEventListener('click', iniciarOuPausar);
+formTarefa.addEventListener('submit', adicionarTarefa);
 
-        tarefas.push(novaTarefa);
-        tarefaInput.value = '';
-    }
-
- 
-
-    function deletarTarefa (tarefaId) {
-        tarefas = tarefas.filter(tarefa => tarefa.id !== tarefaId);
-    }
-}
+atualizarTempo();
