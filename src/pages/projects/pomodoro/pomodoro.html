@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <!-- GIF de fundo -->
+    <img src="imagens/69b39f6dab8b07dc4b1e5039054b9f50.gif" alt="GIF de fundo" id="gif-bg">
+
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Fokus Study</h1>
+        <nav class="cabecalho__nav">
+            <button class="cabecalho__botao active" data-modo="foco">Foco</button>
+            <button class="cabecalho__botao" data-modo="curto">Descanso Curto</button>
+            <button class="cabecalho__botao" data-modo="longo">Descanso Longo</button>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <div class="temporizador">
+            <span id="tempo">25:00</span>
+            <button id="btn-iniciar-pausar">Começar</button>
+        </div>
+
+        <div class="tarefas">
+            <h2>Tarefas</h2>
+            <form id="form-tarefa">
+                <input type="text" id="input-tarefa" placeholder="Adicione uma tarefa" required>
+                <button type="submit">Adicionar</button>
+            </form>
+            <ul id="lista-tarefas"></ul>
+        </div>
+    </main>
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>

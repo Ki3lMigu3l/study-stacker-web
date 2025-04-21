@@ -1,151 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,700;1,200&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/pagina-inicial/reset.css">
-    <link rel="stylesheet" href="styles/pagina-inicial/styles.css">
-    <link rel="stylesheet" href="styles/pagina-inicial/swiper.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Stacker</title>
-</head>
+  
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="src/styles/base/reset.css"/>
+    <link rel="stylesheet" href="src/styles/pages/GlobalStyle.css"/>
+    <link rel="stylesheet" href="src/styles/components/Header.css"/>
+    <link rel="stylesheet" href="src/styles/components/Swiper.css"/>
+    <link rel="stylesheet" href="src/styles/components/About.css"/>
+    <link rel="stylesheet" href="src/styles/components/Project.css"/>
+    <link rel="stylesheet" href="src/styles/components/Footer.css"/>
+  </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__container-nav">
-
-            <div class="cabecalho__container-logo">
-                <a href="../index.html" class="cabecalho__logo">Study</a><button class="cabecalho__logo-final"
-                    id="btn-tema">Stacker</button>
-            </div>
-
-            <div class="cabecalho__container-opcoes">
-                <a href="pomodoro/pomodoro.html" class="cabecalho_opcoes-link">Pomodoro</a>
-                <a href="jogos/numeroSecreto.html" class="cabecalho_opcoes-link">Jogos</a>
-                <a href="https://github.com/Ki3lMigu3l" target="_blank" class="cabecalho_opcoes-link">Github</a>
-                <a href="#sobre" class="cabecalho_opcoes-link">Sobre</a>
-            </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+          <div class="nav__logo">
+            <a href="index.html" class="logo__text">Study</a>
+            <a href="index.html" id="btn-theme" class="logo__highlight">Stacker</a>
+          </div>
+    
+          <div class="nav__links-container">
+            <ul class="nav__links">
+                <li><a href="src/pages/projects/pomodoro/pomodoro.html" class="nav__link">Pomodoro</a></li>
+                <li><a href="src/pages/projects/jogo/numeroSecreto.html" class="nav__link">Jogos</a></li>
+                <li><a href="https://github.com/Ki3lMigu3l" class="nav__link" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="#sobre" class="nav__link">Sobre</a></li>
+              </ul>
+          </div>
         </nav>
-    </header>
+      </header>
 
-    <main>
-        
-        <div class="swiper">
-        
-            <div class="logo">
-                <div class="tools">
-                    <div class="circle">
-                        <span class="red box"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="yellow box"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="green box"></span>
-                    </div>
-                </div>
-                <div class="card__content">
-                </div>
-            </div>    <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/pomodoro.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/numero-secreto.png" alt=""></div>
-                ...
+      <main class="main">
+        <section class="slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="public/assets/images/numero-secreto.png" alt="Jogo Número Secreto" />
             </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-    </main>
-
-    <section class="sobre__container">
-
-
-        <div class="sobre__container-informacoes">
-            
-            <div class="sobre__container-conteudo">
-
-
-                <h2 class="sobre-titulo">Quem sou eu ?</h2>
-                <p>Meu nome é Ezequiel Miguel, sou graduado em Análise e Desenvolvimento de Sistemas e tenho mais de dois anos de experiência na área da tecnologia.
-
-                    Nos últimos anos, venho me especializando em Java com foco no ecossistema Spring, criando soluções robustas e escaláveis. Também trabalho com tecnologias de frontend como React e Angular, desenvolvendo interfaces modernas e responsivas.</p>
-                    
-                <div class="sobre__container-img">
-                    <img src="assets/github-header.png" alt="">
-                </div>
+            <div class="swiper-slide">
+              <img src="public/assets/images/pomodoro.png" alt="Projeto Pomodoro" />
             </div>
-            
+          </div>
+          <!-- Navegação -->
+          <div class="swiper-pagination"></div>
+        </section>
+      </main>
+      
+      
+      <section class="about">
+          <div class="about__wrapper">
+              <div class="about__content">
+                <div class="circle__container">
+                    <span class="circle red"></span>
+                    <span class="circle yellow"></span>
+                    <span class="circle green"></span>
+                  </div>
+                    <h2 class="about__title">Quem sou eu?</h2>
+                    <p class="about__text">
+              Olá! Meu nome é <strong>Ezequiel Miguel</strong>. Sou graduado em Análise e Desenvolvimento de Sistemas e atuo há mais de dois anos na área da tecnologia.
+              <br><br>
+              Tenho me especializado em <strong>Java</strong> com foco no ecossistema <strong>Spring</strong>, desenvolvendo soluções robustas e escaláveis. Além disso, possuo experiência com tecnologias de frontend como <strong>React</strong> e <strong>Angular</strong>, criando interfaces modernas, responsivas e voltadas à experiência do usuário.
+            </p>
+      
+            <div class="about__image-wrapper">
+              <img src="public/assets/images/github-header.png" alt="Banner com ilustração representando o GitHub" class="about__image" />
+            </div>
+          </div>
         </div>
+      </section>
 
-
-    </section>
-
-    <section class="sobre__container-projeto" id="sobre">
-
-        <h2 class="sobre-titulo">Sobre o projeto</h2>
-
-        <div class="sobre__container-informacoes-projeto">
-            <div class="sobre__container-conteudo-projeto">
-                <div class="logo">
-                    <div class="tools">
-                        <div class="circle">
-                            <span class="red box"></span>
-                        </div>
-                        <div class="circle">
-                            <span class="yellow box"></span>
-                        </div>
-                        <div class="circle">
-                            <span class="green box"></span>
-                        </div>
-                    </div>
-                    <div class="card__content">
-                    </div>
-                    <p> Este projeto em andamento visa consolidar os conhecimentos adquiridos nos cursos de formação da
-                        Alura, especialmente na formação "Desenvolva Aplicações Web com JavaScript". Utilizando
-                        tecnologias fundamentais da web, como HTML, CSS e JavaScript, a iniciativa busca explorar
-                        recursos avançados para proporcionar uma experiência interativa e inovadora.</p>
-
-                    <h2 class="sobre-titulo-projeto">Recursos Principais:</h2>
-
-                    <p><strong>Reconhecimento de Voz (Web Speech API):</strong> Implementamos a Web Speech API para
-                        integrar funcionalidades de reconhecimento de voz à aplicação. Essa tecnologia possibilita
-                        comandos de voz, oferecendo uma experiência única e acessível aos
-                        usuários.<br><br><strong>Carrossel Dinâmico (Swiper JS):</strong> Incorporamos a biblioteca
-                        Swiper JS para criar um carrossel dinâmico e responsivo. Essa funcionalidade não apenas melhora
-                        a navegação, mas também proporciona uma apresentação visualmente atraente do conteúdo.</p>
-
-
-                    <h2 class="sobre-titulo-projeto">Objetivo Final:</h2>
-                    <p>O projeto em andamento servirá como documentação prática para os conceitos e técnicas abordados
-                        na formação "Desenvolva Aplicações Web com JavaScript" da Alura. Além de consolidar o
-                        aprendizado, a aplicação pretende ser uma referência para futuros projetos, demonstrando a
-                        aplicação efetiva dos conhecimentos adquiridos.<br><br>Este é um passo importante na jornada de
-                        aprendizado, explorando as fronteiras da interatividade e usabilidade na web moderna.
-                        Acompanhe-nos enquanto continuamos a desenvolver e aprimorar esta aplicação, explorando novas
-                        possibilidades e integrando mais tecnologias avançadas.</p>
-                </div>
+      <section class="project" id="sobre">
+        <div class="project__wrapper">
+          <div class="project__content">
+            
+            <div class="circle__container">
+              <span class="circle red"></span>
+              <span class="circle yellow"></span>
+              <span class="circle green"></span>
             </div>
-
-    </section>
-
-
-    <footer class="rodape">
-        <div class="rodape__conteudos">
-            <img class="rodape__imagem" src="assets/github-icon.png" alt="">
-            <a href="https://github.com/Ki3lMigu3l" target="_blank"
-                class="cabecalho_opcoes-link github-titulo">Ki3lMigu3l</a>
+      
+            <h2 class="project__title">Sobre o Projeto</h2>
+      
+            <p class="project__text">
+              Este projeto em andamento visa consolidar os conhecimentos adquiridos nos cursos da Alura, especialmente na formação <strong>"Desenvolva Aplicações Web com JavaScript"</strong>.
+              Utilizando tecnologias fundamentais como <strong>HTML, CSS e JavaScript</strong>, a iniciativa busca explorar recursos avançados para proporcionar uma experiência interativa e inovadora.
+            </p>
+      
+            <h3 class="project__subtitle">Recursos Principais:</h3>
+            <p class="project__text">
+              <strong>Reconhecimento de Voz (Web Speech API):</strong> Integramos a Web Speech API para permitir comandos por voz, oferecendo uma experiência acessível e moderna aos usuários.
+              <br><br>
+              <strong>Carrossel Dinâmico (Swiper JS):</strong> Utilizamos a biblioteca Swiper JS para criar um carrossel responsivo e visualmente atraente, melhorando a navegação entre os projetos.
+            </p>
+      
+            <h3 class="project__subtitle">Objetivo Final:</h3>
+            <p class="project__text">
+              Este repositório serve como documentação prática da formação, demonstrando a aplicação real dos conceitos aprendidos.
+              Ele também funcionará como base para projetos futuros, com foco em usabilidade, interatividade e boas práticas de desenvolvimento web.
+            </p>
+      
+          </div>
         </div>
-    </footer>
+      </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/index.js"></script>
+      <footer class="footer">
+        <div class="footer__content">
+          <img class="footer__icon" src="/public/assets/icons/github-icon.png" alt="Ícone do GitHub" />
+          <a href="https://github.com/Ki3lMigu3l" target="_blank" class="footer__link">Ki3lMigu3l</a>
+        </div>
+      </footer>
+      
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="src/js/swiper.js"></script>
 </body>
 
 </html>

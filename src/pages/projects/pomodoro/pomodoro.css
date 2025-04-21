@@ -1,0 +1,171 @@
+:root {
+    --fonte-principal: 'Inter', sans-serif;
+    --cor-texto: #f0f0f0;
+    --cor-destaque: #ff6b6b;
+    --cor-botao: #4ecdc4;
+    --cor-botao-hover: #45b8b0;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do GIF de fundo */
+#gif-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o GIF cubra toda a tela */
+    z-index: -1; /* Coloca o GIF atrás do conteúdo */
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.cabecalho, .principal {
+    background-color: rgba(30, 30, 30, 0.929);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cabecalho__titulo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cabecalho__nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cabecalho__botao {
+    background-color: var(--cor-botao);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cabecalho__botao.active {
+    background-color: var(--cor-destaque);
+}
+
+.cabecalho__botao:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.temporizador {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#tempo {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#btn-iniciar-pausar {
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+#btn-iniciar-pausar:hover {
+    background-color: #ff5252;
+}
+
+.tarefas {
+    width: 100%;
+    max-width: 400px;
+}
+
+#form-tarefa {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#input-tarefa {
+    flex: 1;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#form-tarefa button {
+    background-color: var(--cor-botao);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#form-tarefa button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-tarefas li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-tarefas li button {
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+#lista-tarefas li button:hover {
+    background-color: #ff5252;
+}
