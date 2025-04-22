@@ -1,130 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Stacker</title>
-  
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="src/styles/pages/GlobalStyle.css" />
+    <link rel="stylesheet" href="src/styles/components/Header.css" />
+    <link rel="stylesheet" href="src/styles/components/Swiper.css" />
+    <link rel="stylesheet" href="src/styles/components/About.css" />
+    <link rel="stylesheet" href="src/styles/components/Project.css" />
+    <link rel="stylesheet" href="src/styles/components/Footer.css" />
+
     <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
-  
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  
-    <!-- Local Styles -->
-    <link rel="stylesheet" href="src/styles/base/reset.css"/>
-    <link rel="stylesheet" href="src/styles/pages/GlobalStyle.css"/>
-    <link rel="stylesheet" href="src/styles/components/Header.css"/>
-    <link rel="stylesheet" href="src/styles/components/Swiper.css"/>
-    <link rel="stylesheet" href="src/styles/components/About.css"/>
-    <link rel="stylesheet" href="src/styles/components/Project.css"/>
-    <link rel="stylesheet" href="src/styles/components/Footer.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-          <div class="nav__logo">
-            <a href="index.html" class="logo__text">Study</a>
-            <a href="index.html" id="btn-theme" class="logo__highlight">Stacker</a>
-          </div>
-    
-          <div class="nav__links-container">
-            <ul class="nav__links">
-                <li><a href="src/pages/projects/pomodoro/pomodoro.html" class="nav__link">Pomodoro</a></li>
-                <li><a href="src/pages/projects/jogo/numeroSecreto.html" class="nav__link">Jogos</a></li>
-                <li><a href="https://github.com/Ki3lMigu3l" class="nav__link" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="#sobre" class="nav__link">Sobre</a></li>
-              </ul>
-          </div>
-        </nav>
-      </header>
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html" class="logo__text">Study</a>
+          <a href="index.html" id="btn-theme" class="logo__highlight"
+            >Stacker</a
+          >
+        </div>
 
-      <main class="main">
-        <section class="slider swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="public/assets/images/numero-secreto.png" alt="Jogo Número Secreto" />
-            </div>
-            <div class="swiper-slide">
-              <img src="public/assets/images/pomodoro.png" alt="Projeto Pomodoro" />
-            </div>
+        <div class="nav__links-container">
+          <ul class="nav__links">
+            <li>
+              <a
+                href="src/pages/projects/pomodoro/pomodoro.html"
+                class="nav__link"
+                >Pomodoro</a
+              >
+            </li>
+            <li>
+              <a
+                href="src/pages/projects/jogo/numeroSecreto.html"
+                class="nav__link"
+                >Jogos</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Ki3lMigu3l"
+                class="nav__link"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="public/assets/images/numero-secreto.png"
+              alt="Jogo Número Secreto"
+            />
           </div>
-          <!-- Navegação -->
-          <div class="swiper-pagination"></div>
-        </section>
-      </main>
-      
-      
-      <section class="about">
-          <div class="about__wrapper">
-              <div class="about__content">
-                <div class="circle__container">
-                    <span class="circle red"></span>
-                    <span class="circle yellow"></span>
-                    <span class="circle green"></span>
-                  </div>
-                    <h2 class="about__title">Quem sou eu?</h2>
-                    <p class="about__text">
-              Olá! Meu nome é <strong>Ezequiel Miguel</strong>. Sou graduado em Análise e Desenvolvimento de Sistemas e atuo há mais de dois anos na área da tecnologia.
-              <br><br>
-              Tenho me especializado em <strong>Java</strong> com foco no ecossistema <strong>Spring</strong>, desenvolvendo soluções robustas e escaláveis. Além disso, possuo experiência com tecnologias de frontend como <strong>React</strong> e <strong>Angular</strong>, criando interfaces modernas, responsivas e voltadas à experiência do usuário.
-            </p>
-      
-            <div class="about__image-wrapper">
-              <img src="public/assets/images/github-header.png" alt="Banner com ilustração representando o GitHub" class="about__image" />
-            </div>
+          <div class="swiper-slide">
+            <img
+              src="public/assets/images/pomodoro.png"
+              alt="Projeto Pomodoro"
+            />
           </div>
         </div>
+        <!-- Navegação -->
+        <div class="swiper-pagination"></div>
       </section>
+    </main>
 
-      <section class="project" id="sobre">
-        <div class="project__wrapper">
-          <div class="project__content">
-            
-            <div class="circle__container">
-              <span class="circle red"></span>
-              <span class="circle yellow"></span>
-              <span class="circle green"></span>
-            </div>
-      
-            <h2 class="project__title">Sobre o Projeto</h2>
-      
-            <p class="project__text">
-              Este projeto em andamento visa consolidar os conhecimentos adquiridos nos cursos da Alura, especialmente na formação <strong>"Desenvolva Aplicações Web com JavaScript"</strong>.
-              Utilizando tecnologias fundamentais como <strong>HTML, CSS e JavaScript</strong>, a iniciativa busca explorar recursos avançados para proporcionar uma experiência interativa e inovadora.
-            </p>
-      
-            <h3 class="project__subtitle">Recursos Principais:</h3>
-            <p class="project__text">
-              <strong>Reconhecimento de Voz (Web Speech API):</strong> Integramos a Web Speech API para permitir comandos por voz, oferecendo uma experiência acessível e moderna aos usuários.
-              <br><br>
-              <strong>Carrossel Dinâmico (Swiper JS):</strong> Utilizamos a biblioteca Swiper JS para criar um carrossel responsivo e visualmente atraente, melhorando a navegação entre os projetos.
-            </p>
-      
-            <h3 class="project__subtitle">Objetivo Final:</h3>
-            <p class="project__text">
-              Este repositório serve como documentação prática da formação, demonstrando a aplicação real dos conceitos aprendidos.
-              Ele também funcionará como base para projetos futuros, com foco em usabilidade, interatividade e boas práticas de desenvolvimento web.
-            </p>
-      
+    <section class="about">
+      <div class="about__wrapper">
+        <div class="about__content">
+          <div class="circle__container">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
           </div>
+          <h2 class="about__title">Quem sou eu?</h2>
+          <p class="about__text">
+            Olá! Meu nome é <strong>Ezequiel Miguel</strong>. Sou graduado em
+            Análise e Desenvolvimento de Sistemas e atuo há mais de dois anos na
+            área da tecnologia. <br /><br />
+            Tenho me especializado em <strong>Java</strong> com foco no
+            ecossistema <strong>Spring</strong>, desenvolvendo soluções robustas
+            e escaláveis. Além disso, possuo experiência com tecnologias de
+            frontend como <strong>React</strong> e <strong>Angular</strong>,
+            criando interfaces modernas, responsivas e voltadas à experiência do
+            usuário.
+          </p>
+
+          <div class="about__image-wrapper">
+            <img
+              src="public/assets/images/github-header.png"
+              alt="Banner com ilustração representando o GitHub"
+              class="about__image"
+            />
+          </div>
+          <p class="about__text">
+            Também possuo experiência como <strong>Analista de Redes</strong>, onde desenvolvi habilidades em <strong>infraestrutura crítica</strong>, <strong>segurança da informação</strong> e <strong>monitoramento proativo</strong>, competências que agregam ao meu trabalho no desenvolvimento de soluções robustas e escaláveis. Ao longo da minha trajetória, conectei esse conhecimento técnico à área de desenvolvimento, criando soluções mais inteligentes e eficientes.<br /><br />
+            Desenvolvi projetos <strong>Full Stack</strong> utilizando <strong>Java</strong>, <strong>Spring Boot</strong> e <strong>React.js</strong>, explorando ferramentas como <strong>Docker</strong>, <strong>Jenkins</strong> e <strong>GitLab CI/CD</strong>. Tenho me aprofundado em <strong>Cloud</strong> (com foco em <strong>AWS</strong> e <strong>Azure</strong>) e buscado constantemente aprimorar minhas práticas de desenvolvimento, com foco em <strong>entregas de qualidade</strong>, <strong>código limpo</strong> e <strong>boas práticas de arquitetura</strong>.
+          </p>
+          
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="footer">
-        <div class="footer__content">
-          <img class="footer__icon" src="/public/assets/icons/github-icon.png" alt="Ícone do GitHub" />
-          <a href="https://github.com/Ki3lMigu3l" target="_blank" class="footer__link">Ki3lMigu3l</a>
+    <section class="project" id="sobre">
+      <div class="project__wrapper">
+        <div class="project__content">
+          <div class="circle__container">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
+
+          <h2 class="project__title">Sobre o Projeto</h2>
+
+          <p class="project__text">
+            Este projeto em andamento visa consolidar os conhecimentos
+            adquiridos nos cursos da Alura, especialmente na formação
+            <strong>"Desenvolva Aplicações Web com JavaScript"</strong>.
+            Utilizando tecnologias fundamentais como
+            <strong>HTML, CSS e JavaScript</strong>, a iniciativa busca explorar
+            recursos avançados para proporcionar uma experiência interativa e
+            inovadora.
+          </p>
+
+          <h3 class="project__subtitle">Recursos Principais:</h3>
+          <p class="project__text">
+            <strong>Reconhecimento de Voz (Web Speech API):</strong> Integramos
+            a Web Speech API para permitir comandos por voz, oferecendo uma
+            experiência acessível e moderna aos usuários. <br /><br />
+            <strong>Carrossel Dinâmico (Swiper JS):</strong> Utilizamos a
+            biblioteca Swiper JS para criar um carrossel responsivo e
+            visualmente atraente, melhorando a navegação entre os projetos.
+          </p>
+
+          <h3 class="project__subtitle">Objetivo Final:</h3>
+          <p class="project__text">
+            Este repositório serve como documentação prática da formação,
+            demonstrando a aplicação real dos conceitos aprendidos. Ele também
+            funcionará como base para projetos futuros, com foco em usabilidade,
+            interatividade e boas práticas de desenvolvimento web.
+          </p>
         </div>
-      </footer>
-      
+      </div>
+    </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-      <script src="src/js/swiper.js"></script>
-</body>
+    <footer class="footer">
+      <div class="footer__content">
+        <img
+          class="footer__icon"
+          src="/public/assets/icons/github-icon.png"
+          alt="Ícone do GitHub"
+        />
+        <a
+          href="https://github.com/Ki3lMigu3l"
+          target="_blank"
+          class="footer__link"
+          >Ki3lMigu3l</a
+        >
+      </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="src/js/swiper.js"></script>
+  </body>
 </html>
